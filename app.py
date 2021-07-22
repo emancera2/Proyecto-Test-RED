@@ -44,6 +44,11 @@ else: #Conexión no Exitosa
     oled.text('Conexion No/OK', 10, 32)#Muestra mensaje en pantalla oled
     oled.show()
 #------------------------------------------------
+
+#------------------------------------------------
+    #Aqui va tu codigo Cami
+#------------------------------------------------
+    
 #Salidas
 led = Pin(12, Pin.OUT)
 
