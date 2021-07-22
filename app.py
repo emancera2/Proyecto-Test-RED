@@ -6,6 +6,8 @@ import socket
 import utime
 import ssd1306
 import claseRGB
+import speedtest
+import datetime
 
 #Configuración inicial de WiFi
 ssid = 'Harry Mancera'  #Nombre de la Red
@@ -46,7 +48,13 @@ else: #Conexión no Exitosa
 #------------------------------------------------
 
 #------------------------------------------------
-    #Aqui va tu codigo Cami
+    #Obteniendo datos de subida y bajada de internet     
+s = speedtest.Speedtest()
+while True:
+   time = datetime.datetime.now().strftime("%H:%M:%S")
+   downspeed = round((round(s.download()) / 1048576), 2) #Despues de tener los datos de subida/bajada se convierte a megabits por segundo (Mb/s)
+   upspeed = round((round(s.upload()) / 1048576), 2) 
+   print(f"time: {time}, downspeed: {downspeed} Mb/s, upspeed: {upspeed} Mb/s")
 #------------------------------------------------
     
 #Salidas
