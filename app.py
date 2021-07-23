@@ -6,7 +6,7 @@ import socket
 import utime
 import ssd1306
 import claseRGB
-import speedtest
+import speedtest-cli
 import datetime
 
 #Configuración inicial de WiFi
